@@ -6,7 +6,6 @@ import { usePathname, useRouter } from "next/navigation";
 export default function PageWrapper({ children }) {
   const authContext = useAuth();
   const { user, loading, set, appLoading } = authContext;
-
   const router = useRouter();
   const pathname = usePathname();
 
@@ -23,10 +22,11 @@ export default function PageWrapper({ children }) {
           set("appLoading", false);
         }
       } else {
+        set("appLoading", false);
         router.push(openpaths.login);
       }
     }
-  }, [loading]);
+  }, [loading, user]);
 
   return (
     <>

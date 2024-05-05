@@ -23,9 +23,10 @@ export const AuthContextProvider = ({ children }) => {
         setUser(null);
       }
       setLoading(false);
-      return () => authSubscribe();
     });
+    return () => authSubscribe();
   }, []);
+
   function set(id, data) {
     if (id === "appLoading") {
       setAppLoading(data);

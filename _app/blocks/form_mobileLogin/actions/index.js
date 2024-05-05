@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { senOtpToPhone, confirmOtp } from "../../../../_auth/phoneauth";
+import { useAuth } from "../../../../_app/context/authContext";
 
 export default function State() {
+  const authContext = useAuth();
+  const { set } = authContext;
   const [userPhone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [buttonState, setButtonState] = useState("default");
@@ -57,8 +60,6 @@ export default function State() {
   }
 
   function createError(text, isButton) {
-    console.log(text);
-    console.log(typeof text);
     setError(String(text));
     isButton ? setButtonState("error") : "";
     setTimeout(() => {
@@ -69,6 +70,7 @@ export default function State() {
   }
   function createSuccess() {
     setButtonState("success");
+    set("appLoading", true);
     setTimeout(() => {
       //
     }, 4000);

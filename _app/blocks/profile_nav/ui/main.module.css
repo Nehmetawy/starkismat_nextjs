@@ -24,6 +24,8 @@
   gap: 20px;
   justify-content: center;
   border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .iconCont {
