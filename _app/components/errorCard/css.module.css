@@ -1,0 +1,25 @@
+.container {
+  padding: 15px;
+  border-left: 4px solid var(--red);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--neuomorphShadowA);
+  margin: 10px 4px 30px;
+}
+
+.iconCont {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(2px);
+}
+
+.textCont {
+  /* border: 1px solid white; */
+  font-size: 13px;
+}

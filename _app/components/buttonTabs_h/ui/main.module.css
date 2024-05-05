@@ -1,0 +1,30 @@
+.cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabsCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: var(--neuomorphInShadowA);
+  border: 2px solid var(--border3);
+}
+
+.button {
+  height: 34px;
+  text-align: center;
+  width: 100%;
+  border-radius: 40px;
+  /* border: 2px solid var(--borderPrimary); */
+  letter-spacing: 1px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}

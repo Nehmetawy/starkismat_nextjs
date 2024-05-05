@@ -1,0 +1,53 @@
+.cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.button {
+  box-shadow: var(--neuomorphShadowA);
+  border-radius: 5px;
+  height: 34px;
+  text-align: center;
+  width: 120px;
+  border-radius: 40px;
+  border: 2px solid var(--borderPrimary);
+  letter-spacing: 1px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.onClick {
+  width: 34px;
+  border-width: 3px;
+  font-size: 0;
+  border-color: #bbbbbb;
+  border-left-color: var(--borderPrimary);
+  animation: rotating 2s 0.25s linear infinite;
+}
+
+.success {
+  color: white;
+  background-color: var(--borderPrimary);
+}
+
+.error {
+  color: white;
+  background-color: var(--red);
+  border: 2px solid var(--red);
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

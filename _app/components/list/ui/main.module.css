@@ -1,0 +1,76 @@
+.listcont {
+  /*  */
+  margin-top: 20px;
+}
+
+.listHeadCont {
+  border: 0.5px solid var(--borderPrimary);
+  min-height: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.headFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  gap: 15px;
+}
+
+.headText {
+  font-size: 14px;
+  text-align: center;
+}
+
+.listBox {
+  box-shadow: var(--neuomorphInShadowB);
+  min-height: 120px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* --------------------------------------------- */
+/* list */
+/* --------------------------------------------- */
+.listRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 0.5px solid var(--borderPrimary);
+}
+
+.winFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.text {
+  font-size: 13px;
+}
+
+.colorWin {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--red);
+}
+
+.numWin {
+  font-size: 13px;
+}
+
+.colorWin.r {
+  background-color: var(--red);
+}
+
+.colorWin.g {
+  background-color: var(--green);
+}
+
+.colorWin.v {
+  background-color: var(--violet);
+}

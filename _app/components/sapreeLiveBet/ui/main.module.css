@@ -1,0 +1,49 @@
+.cardCont {
+  box-shadow: var(--neuomorphShadowA);
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.simpleFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.iconButton {
+  padding: 10px 10px;
+  transform: translateY(1px);
+}
+
+.text {
+  font-weight: 450;
+  letter-spacing: 1px;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 40px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #eee9e9;
+  border-left-color: var(--borderPrimary);
+  animation: rotating 2s 0.25s linear infinite;
+  box-shadow: var(--neuomorphShadowA);
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,34 @@
+.input {
+  padding: 8px 10px;
+  box-shadow: var(--neuomorphInShadowB);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: var(--textSecondary);
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: 12px;
+  /* outline: 0.5px solid rgb(142, 19, 41); */
+}
+
+.errorCont {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.errorCont.active {
+  grid-template-rows: 1fr;
+}
+
+.errorCont > .box {
+  overflow: hidden;
+}
+
+.errortext {
+  color: red;
+  font-size: 12px;
+  padding: 5px 0;
+  user-select: none;
+}

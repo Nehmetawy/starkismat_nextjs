@@ -1,0 +1,31 @@
+.container {
+  box-shadow: var(--neuomorphShadowA);
+  border-radius: 3px;
+}
+
+.navCont {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.logoutCont {
+  background-color: brown;
+  box-shadow: var(--neuomorphShadowA);
+  padding: 10px 10px;
+  margin-top: 50px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.iconCont {
+  transform: translateY(2px);
+}

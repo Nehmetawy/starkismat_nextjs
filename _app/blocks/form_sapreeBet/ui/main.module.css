@@ -1,0 +1,88 @@
+.formCont {
+  margin: 5px 0;
+  /* box-shadow: var(--neuomorphShadowA); */
+  padding: 10px;
+}
+
+.optionsGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  row-gap: 15px;
+  column-gap: 15px;
+}
+
+.optiosCont {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 20%;
+}
+
+.gap {
+  height: 5px;
+}
+
+.options {
+  box-shadow: var(--neuomorphShadowA);
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cancelCont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button showcase */
+.simpleButton {
+  display: inline-block;
+  padding: 6px 15px;
+  max-width: 250px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  border-radius: 3px;
+  box-shadow: var(--neuomorphShadowA);
+}
+
+.simpleButton.t1 {
+  background: linear-gradient(-45deg, var(--green) 50%, var(--purple) 50%);
+}
+
+.simpleButton.t2 {
+  background: linear-gradient(-45deg, var(--red) 50%, var(--purple) 50%);
+}
+.simpleButton.r {
+  background-color: var(--red);
+}
+.simpleButton.v {
+  background-color: var(--purple);
+}
+.simpleButton.g {
+  background-color: var(--green);
+}

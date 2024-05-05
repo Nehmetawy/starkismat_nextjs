@@ -1,0 +1,16 @@
+.cont {
+  padding-top: 20px;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+  border-top: 4px solid rgb(183, 75, 93);
+  margin: 20px;
+}
+
+.cont:hover {
+  grid-template-rows: 1fr;
+}
+
+.cont > .box {
+  overflow: hidden;
+}

@@ -1,0 +1,111 @@
+.ludoUiCont {
+}
+
+.ludoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border-radius: 1px;
+}
+
+.ludoCell {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  border-right: 1px solid var(--borderSecondary);
+  border-bottom: 1px solid var(--borderSecondary);
+}
+
+.ludoCell_tl {
+  border-top: 1px solid var(--borderSecondary);
+  border-left: 1px solid var(--borderSecondary);
+}
+
+.ludoCell_t {
+  border-top: 1px solid var(--borderSecondary);
+}
+
+.ludoCell_l {
+  border-left: 1px solid var(--borderSecondary);
+}
+
+.castleBase {
+  grid-row: 7 / span 3;
+  grid-column: 7 / span 3;
+
+  display: grid;
+  align-items: center;
+  padding: 7px;
+}
+
+.castleBox {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5));
+
+  box-shadow: var(--neuomorphShadowA);
+}
+
+/* ------------------------------------------------------- */
+/* player base */
+/* ------------------------------------------------------- */
+.playerBase {
+  display: grid;
+  align-items: center;
+}
+
+.topleft {
+  grid-row: 1 / span 6;
+  grid-column: 1 / span 6;
+  padding: 0 10px 10px 0;
+}
+
+.topright {
+  grid-row: 1 / span 6;
+  grid-column: 10 / span 6;
+  padding: 0 0 10px 10px;
+}
+
+.bottomleft {
+  grid-row: 10 / span 6;
+  grid-column: 1 / span 6;
+  padding: 10px 10px 0 0;
+}
+
+.bottomright {
+  grid-row: 10 / span 6;
+  grid-column: 10 / span 6;
+  padding: 10px 0 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .topleft {
+    padding: 0 5px 5px 0;
+  }
+  .topright {
+    padding: 0 0 5px 5px;
+  }
+  .bottomleft {
+    padding: 5px 5px 0 0;
+  }
+  .bottomright {
+    padding: 5px 0 0 5px;
+  }
+}
+
+.playerBox {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5));
+
+  box-shadow: var(--neuomorphInShadowA);
+}
