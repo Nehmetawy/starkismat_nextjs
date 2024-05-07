@@ -1,0 +1,125 @@
+.pannel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.pannel.open {
+  grid-template-rows: 1fr;
+}
+
+.pannel > div {
+  overflow: hidden;
+}
+/* header */
+.listHeadCont {
+  border: 0.5px solid var(--borderPrimary);
+  min-height: 20px;
+  border-radius: 5px 5px 0 0;
+}
+.active {
+  color: red;
+  border-color: red;
+}
+
+.headFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  gap: 15px;
+}
+
+.headText {
+  font-size: 14px;
+  text-align: center;
+}
+/* list box */
+.listBox {
+  box-shadow: var(--neuomorphInShadowB);
+  min-height: 120px;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}
+/* list item */
+.itemCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid var(--borderPrimary);
+}
+.itemCont > div {
+  /* border: 1px solid white; */
+  width: 100%;
+  text-align: center;
+}
+.itemColorBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.colorItem {
+  width: 13px;
+  height: 13px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: white;
+  display: inline-block;
+  margin: 0 5px;
+}
+.red {
+  background-color: var(--red);
+}
+.violet {
+  background-color: var(--purple);
+}
+.green {
+  background-color: var(--green);
+}
+/*  */
+.iconButton {
+  transform: translateY(1px);
+}
+/* loading */
+.loadingIcon {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  border-top: 2px solid var(--borderPrimary);
+  border-left: 2px solid var(--borderPrimary);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/* confitti */
+.confittiContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 33%;
+  height: 100px;
+}
+.statusSuccess {
+  color: var(--green);
+  font-size: 13px;
+}
+.statusFail {
+  color: rgb(226, 71, 71);
+  letter-spacing: 1px;
+  font-size: 13px;
+}

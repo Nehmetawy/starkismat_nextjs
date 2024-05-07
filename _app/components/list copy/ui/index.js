@@ -1,6 +1,5 @@
 import { useState } from "react";
 import css from "./main.module.css";
-import Lottie from "../../lottie";
 import List from "./list";
 import HeadRow from "./head";
 import { DivExpand } from "../../../pannels";

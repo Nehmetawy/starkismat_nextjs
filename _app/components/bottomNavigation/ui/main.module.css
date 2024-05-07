@@ -1,6 +1,6 @@
 .container {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   bottom: 10px;
   left: 0;
   right: 0;
@@ -16,6 +16,7 @@
   justify-content: space-evenly;
   flex-wrap: nowrap;
   box-shadow: var(--neuomorphShadowA);
+  background-color: var(--backgroundPrimary);
 }
 
 .navBox {

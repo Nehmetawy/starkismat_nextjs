@@ -18,6 +18,6 @@ export const useUIstate = create(
         }
       });
     },
-    // previous bet result
+    // global error form
   }))
 );
