@@ -1,0 +1,76 @@
+.itemBox {
+  border-bottom: 1px solid var(--borderPrimary);
+}
+.itemCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  flex-wrap: nowrap;
+}
+
+.itemCont > div {
+  /* border: 1px solid white; */
+  width: 100%;
+  text-align: center;
+}
+
+.itemColorBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.colorItem {
+  width: 13px;
+  height: 13px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: white;
+  display: inline-block;
+  margin: 0 5px;
+}
+.red {
+  background-color: var(--red);
+}
+.violet {
+  background-color: var(--purple);
+}
+.green {
+  background-color: var(--green);
+}
+/* render the calimed/status text */
+.statusSuccess {
+  color: var(--green);
+  font-size: 13px;
+}
+.statusFail {
+  color: rgb(226, 71, 71);
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+/* render the body */
+.bodyCont {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.bodyCont.active {
+  grid-template-rows: 1fr;
+}
+.bodyCont > div {
+  overflow: hidden;
+}
+.pair {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 20px;
+}
+.pair > div {
+  width: 100%;
+}

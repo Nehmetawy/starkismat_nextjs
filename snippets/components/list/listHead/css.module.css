@@ -1,0 +1,21 @@
+.ListHeadContainer {
+  border: 0.5px solid var(--borderPrimary);
+  min-height: 20px;
+  border-radius: 5px 5px 0 0;
+}
+.ListHeadContainer.box {
+  border-radius: 0 0;
+}
+.headFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  gap: 15px;
+}
+
+.headText {
+  font-size: 14px;
+  text-align: center;
+}

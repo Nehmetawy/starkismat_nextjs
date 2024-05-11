@@ -1,0 +1,18 @@
+.pannel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.pannel.open {
+  grid-template-rows: 1fr;
+}
+
+.pannel > div {
+  overflow: hidden;
+}
+.listBox {
+  box-shadow: var(--neuomorphInShadowB);
+  min-height: 200px;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}

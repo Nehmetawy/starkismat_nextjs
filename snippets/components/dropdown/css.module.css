@@ -1,0 +1,34 @@
+.container {
+  box-shadow: var(--neuomorphShadowA);
+}
+
+.dropdownCont {
+  /*  */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform: translateY(10px);
+  box-shadow: var(--neuomorphShadowA);
+  z-index: 1000;
+  background-color: var(--backgroundPrimary);
+}
+.dropDownHeading {
+  font-size: 12px;
+  padding: 10px 15px 0px;
+}
+
+.dropDownItem {
+  font-size: 14px;
+  padding: 10px 20px 10px 30px;
+  border-bottom: 1px solid var(--borderPrimary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.dropDownItem:last-child {
+  border-bottom: none;
+}

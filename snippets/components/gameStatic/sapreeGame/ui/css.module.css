@@ -1,0 +1,92 @@
+.sapreeContainer {
+  padding: 10px 0;
+  user-select: none;
+}
+
+.sapreeBox {
+  min-height: 100px;
+  box-shadow: var(--neuomorphInShadowA);
+  letter-spacing: 1px;
+  padding: 15px;
+}
+
+.headGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.gap10 {
+  height: 10px;
+}
+
+.headFlex {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.clockFlex {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.clockPin {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+}
+
+.clockNum {
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 6px;
+  box-shadow: var(--neuomorphShadowA);
+}
+
+/* buttons goes here */
+/* -------------------------------- */
+.buttonsFlex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.simpleButton {
+  width: 100%;
+  padding: 6px;
+  max-width: 250px;
+  color: white;
+  /* color: #207f61; */
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  border-radius: 3px;
+  box-shadow: var(--neuomorphShadowA);
+}
+
+.simpleButton.t1 {
+  background: linear-gradient(-45deg, var(--green) 50%, var(--purple) 50%);
+}
+
+.simpleButton.t2 {
+  background: linear-gradient(-45deg, var(--red) 50%, var(--purple) 50%);
+}
+.simpleButton.r {
+  background-color: var(--red);
+}
+.simpleButton.v {
+  background-color: var(--purple);
+}
+.simpleButton.g {
+  background-color: var(--green);
+}

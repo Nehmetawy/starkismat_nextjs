@@ -1,18 +1,13 @@
-import "../css/global.css";
-import { AuthContextProvider } from "../_app/context/authContext";
-
-// function SafeHydrate({ children }) {
-//   return (
-//     <div suppressHydrationWarning>
-//       {typeof window === "undefined" ? null : children}
-//     </div>
-//   );
-// }
+import "@/assets/css/global.css";
+import AuthContext from "@/snippets/hooks/authContext";
+import { PageWrapper } from "@/snippets/components";
 
 export default function App({ Component, pageProps }) {
   return (
-    <AuthContextProvider>
-      <Component {...pageProps} />
-    </AuthContextProvider>
+    <AuthContext>
+      <PageWrapper>
+        <Component {...pageProps} />
+      </PageWrapper>
+    </AuthContext>
   );
 }

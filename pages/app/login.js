@@ -1,9 +1,8 @@
-import { Form_MobileLogin, PageWrapper } from "../../_app/blocks";
-
+import { FormPhoneLogin } from "@/snippets/blocks";
 export default function HI() {
   return (
-    <PageWrapper>
-      <Form_MobileLogin />
-    </PageWrapper>
+    <div>
+      <FormPhoneLogin />
+    </div>
   );
 }

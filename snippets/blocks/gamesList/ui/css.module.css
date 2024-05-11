@@ -1,0 +1,36 @@
+.gameBox {
+  /*  */
+  padding: 10px;
+  box-shadow: var(--neuomorphShadowA);
+  margin: 20px 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.button {
+  box-shadow: var(--neuomorphShadowA);
+  border-radius: 5px;
+  height: 34px;
+  text-align: center;
+  width: 90px;
+  border-radius: 40px;
+  border: 2px solid var(--borderPrimary);
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}

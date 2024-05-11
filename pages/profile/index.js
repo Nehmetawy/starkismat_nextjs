@@ -1,15 +1,13 @@
-import { BottomNavigation } from "../../_app/components";
-import { Profile_Nav, PageWrapper } from "../../_app/blocks";
+import { BottomNavigation, ProfileCard, Gap } from "@/snippets/components";
+import { ProfileNav } from "@/snippets/blocks";
 
-import css from "../../css/main.module.css";
-
-export default function PAGE() {
+export default function Profile() {
   return (
-    <PageWrapper>
-      <div className={css.page}>
-        <Profile_Nav />
-        <BottomNavigation />
-      </div>
-    </PageWrapper>
+    <div>
+      <ProfileCard />
+      <Gap h={30} />
+      <ProfileNav />
+      <BottomNavigation />
+    </div>
   );
 }

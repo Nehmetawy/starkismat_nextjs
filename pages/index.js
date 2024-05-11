@@ -1,10 +1,12 @@
-import { BottomNavigation } from "../_app/components";
+import { BottomNavigation, ProfileCard } from "@/snippets/components";
+import { GamesList, FormPhoneLogin } from "@/snippets/blocks";
 
-import css from "../css/main.module.css";
-
-export default function PAGE() {
+export default function Profile() {
   return (
-    <div className={css.page}>
+    <div>
+      <ProfileCard />
+      <GamesList />
+      {/* <FormPhoneLogin /> */}
       <BottomNavigation />
     </div>
   );

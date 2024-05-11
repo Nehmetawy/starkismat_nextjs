@@ -1,13 +1,12 @@
-import { BottomNavigation } from "../../_app/components";
-import css from "../../css/main.module.css";
-import { PageWrapper } from "../../_app/blocks";
+import { BottomNavigation, ProfileCard } from "@/snippets/components";
+import { GamesList } from "@/snippets/blocks";
 
-export default function PAGE() {
+export default function Profile() {
   return (
-    <PageWrapper>
-      <div className={css.page}>
-        <BottomNavigation />
-      </div>
-    </PageWrapper>
+    <div>
+      <ProfileCard />
+      <GamesList />
+      <BottomNavigation />
+    </div>
   );
 }

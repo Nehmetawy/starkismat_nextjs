@@ -1,0 +1,15 @@
+.itemCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid var(--borderPrimary);
+}
+
+.itemCont > div {
+  /* border: 1px solid white; */
+  width: 100%;
+  text-align: center;
+}

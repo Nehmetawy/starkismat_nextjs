@@ -1,0 +1,79 @@
+.container {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--borderPrimary);
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.flex > div {
+  width: 60%;
+}
+
+.flex2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.heading {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.headingText {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.statusSuccess {
+  color: var(--green);
+  font-size: 13px;
+}
+.statusFail {
+  color: rgb(226, 71, 71);
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.bodyCont {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.bodyCont.active {
+  grid-template-rows: 1fr;
+}
+.bodyCont > div {
+  overflow: hidden;
+}
+/* ------------------------------ */
+.msgSendCont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 40px 0 0;
+}
+.msgGotCont {
+  margin: 40px 0 0;
+}
+.msgSend,
+.msgGot {
+  max-width: 55%;
+  min-width: 40%;
+  padding: 10px 15px;
+  border-radius: 4px 4px 0 4px;
+  background-color: bisque;
+}
+
+.msgGot {
+  border-radius: 4px 4px 4px 0;
+}

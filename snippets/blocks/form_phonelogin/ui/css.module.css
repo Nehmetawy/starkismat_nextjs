@@ -1,0 +1,57 @@
+.formCont {
+  padding: 10px 15px;
+}
+.formHeading {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.placeholder {
+  font-size: 12px;
+  color: rgb(42, 165, 144);
+  letter-spacing: 1px;
+}
+
+.imageCont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.image {
+  width: 400px;
+  height: 400px;
+}
+
+/* ------------------------------ */
+/*otp input */
+/* ------------------------------ */
+.otpInputGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+.otpInput {
+  box-shadow: var(--neuomorphInShadowB);
+  padding: 12px 0;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  background-color: transparent;
+  color: var(--textSecondary);
+  font-size: 16px;
+  caret-color: transparent;
+}
+
+.otpInput.selected {
+  box-shadow: var(--neuomorphInShadowB);
+  outline: 1px solid var(--purple);
+}
