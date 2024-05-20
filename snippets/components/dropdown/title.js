@@ -4,7 +4,7 @@ import { GetById } from "./items";
 
 export default function RenderTitle({ id = "", click = () => {} }) {
   const item = GetById(id) || {};
-  const name = item.name || "item name";
+  const name = item.name || "select";
   const Icon = item.icon || BsExclamationTriangle;
 
   return (

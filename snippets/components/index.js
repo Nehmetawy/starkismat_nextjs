@@ -12,6 +12,7 @@ import PageWrapper from "./pageWrapper";
 import DropDown from "./dropdown";
 import GameStatics from "./gameStatic";
 import PhoneInput from "./inputPhone";
+import BackNavigation from "./backNavigation";
 
 export {
   DropDown,
@@ -28,4 +29,5 @@ export {
   PageWrapper,
   GameStatics,
   PhoneInput,
+  BackNavigation,
 };

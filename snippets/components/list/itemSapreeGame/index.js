@@ -13,7 +13,6 @@ export default function ItemSapreeGame({ item = {} }) {
   if (!betid) {
     return <></>;
   }
-  //
   return (
     <div className={css.itemCont}>
       <div>{betid}</div>

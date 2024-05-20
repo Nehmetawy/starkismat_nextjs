@@ -1,6 +1,8 @@
 import css from "./css.module.css";
 import { useState } from "react";
 import { TfiGift } from "react-icons/tfi";
+import ClaimingHook from "@/snippets/hooks/claimingHook";
+import { VscLoading } from "react-icons/vsc";
 
 export default function ItemSapreeGame({ item = {} }) {
   const [show, setShow] = useState(false);
@@ -16,16 +18,22 @@ export default function ItemSapreeGame({ item = {} }) {
     status = false,
   } = item;
 
-  // if (!betid) {
-  //   return <></>;
-  // }
+  // const isClaiming =
+  const { execClaim, props } = ClaimingHook();
+
+  if (!betid) {
+    return <></>;
+  }
   //
   const toggleShow = () => {
     setShow(!show);
   };
 
   const makeClaim = (event) => {
+    event.stopPropagation();
     event.preventDefault();
+    // make claim
+    execClaim(item);
   };
 
   return (
@@ -33,7 +41,12 @@ export default function ItemSapreeGame({ item = {} }) {
       <div className={css.itemCont} onClick={toggleShow}>
         <div>{betid}</div>
         <Amount claimed={claimed} status={status} amount={amount} />
-        <Claimed claimed={claimed} status={status} click={makeClaim} />
+        <Claimed
+          claimed={claimed}
+          status={status}
+          click={makeClaim}
+          isBetLoading={props.loading}
+        />
       </div>
       <Body item={item} show={show} />
     </div>
@@ -50,7 +63,7 @@ function Amount({ amount, claimed, status }) {
   }
 }
 
-function Claimed({ claimed, status, click = () => {} }) {
+function Claimed({ claimed, status, click = () => {}, isBetLoading = false }) {
   if (claimed) {
     const className = status ? css.statusSuccess : css.statusFail;
     const text = status ? "Success" : "Fail";
@@ -58,7 +71,14 @@ function Claimed({ claimed, status, click = () => {} }) {
   } else {
     return (
       <div className={css.iconButton} onClick={click}>
-        <TfiGift size={18} />
+        {isBetLoading && (
+          <>
+            <div className={css.loading}>
+              <VscLoading size={14} />
+            </div>
+          </>
+        )}
+        {!isBetLoading && <TfiGift size={18} />}
       </div>
     );
   }

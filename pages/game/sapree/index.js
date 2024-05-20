@@ -1,10 +1,16 @@
-import { BottomNavigation, SapreeGame } from "@/snippets/components";
-import { FormPlaceSapreeBet } from "@/snippets/blocks";
+import {
+  BottomNavigation,
+  SapreeGame,
+  ProfileCard,
+} from "@/snippets/components";
+import { FormPlaceSapreeBet, SapreeLive } from "@/snippets/blocks";
 
 export default function Profile() {
   return (
     <div>
+      <ProfileCard />
       <SapreeGame />
+      <SapreeLive />
       <FormPlaceSapreeBet />
       <BottomNavigation />
     </div>

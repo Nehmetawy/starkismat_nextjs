@@ -1,18 +1,22 @@
 import Images from "@/assets/profile";
 import css from "./css.module.css";
 import { TbCoinRupee } from "react-icons/tb";
+import { VscLoading } from "react-icons/vsc";
 import Image from "next/image";
 import useAppstate from "@/snippets/hooks/golbalApp";
+import UserSelf_HOOK from "@/snippets/hooks/userSelf";
 
 export default function ProfileCard() {
   const user = useAppstate((state) => state.userSelf);
-
-  const name = user.name || "New User";
-  const balance = user.balance || 0;
-  const image = user.image || "4";
+  const { get, props } = UserSelf_HOOK();
+  const loading = props.loading || false;
+  const error = props.error || false;
+  const name = user.Name || "New User";
+  const balance = user.Balance || 0;
+  const image = user.Image || "4";
 
   return (
-    <div className={css.container}>
+    <div className={css.container} onClick={get}>
       <div className={css.flex}>
         <div className={css.iconCont}>
           <Image
@@ -25,17 +29,33 @@ export default function ProfileCard() {
         </div>
         <div>
           <div>Profile :-</div>
-          <div className={css.underline}>{name}</div>
+          <div className={css.underline}>
+            <LoadingText loading={loading} text={name} />
+          </div>
         </div>
       </div>
       {/* ------------------------- */}
       <div>
         <div className={css.flex}>
           <TbCoinRupee size={18} />
-          <div className={css.amount}>₹ {balance}</div>
+          <div className={css.amount}>
+            ₹ <LoadingText loading={loading} text={balance} />
+          </div>
         </div>
       </div>
       {/* ------------------------- */}
     </div>
   );
+}
+
+function LoadingText({ loading, text }) {
+  if (loading) {
+    return (
+      <div className={css.loading}>
+        <VscLoading size={12} />
+      </div>
+    );
+  } else {
+    return text;
+  }
 }

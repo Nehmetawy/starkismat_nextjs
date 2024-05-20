@@ -1,10 +1,15 @@
 const baseUrl = "http://localhost:8080/";
 
 const urlDestro = {
-  postSapreeBet: "user/games/sapree/post",
-  getSapreeGames: "app/games/sapree/get",
+  postSapreeBet: "games/sapree/post",
+  getSapreeResult: "user/games/sapree/result",
+  getSapreeGames: "games/sapree/get",
   getUserSapreeGames: "user/games/sapree/get",
   getUserQueries: "user/queries/get",
+  getUserSelf: "user/self/get",
+  postProfileUpdate: "user/profile/post",
+
+  claimSapreeBet: "user/games/sapree/claim",
 };
 
 export const getUrl = (name) => {

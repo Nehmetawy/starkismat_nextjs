@@ -6,7 +6,6 @@ export default function Profile() {
     <div>
       <ProfileCard />
       <GamesList />
-      {/* <FormPhoneLogin /> */}
       <BottomNavigation />
     </div>
   );

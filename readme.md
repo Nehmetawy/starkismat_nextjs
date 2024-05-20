@@ -53,3 +53,12 @@ task
 
     - make a overayig screen to show loading/form/ logging in status
     - little wave interactions when button is clicked
+
+Implemented
+
+    - prevent multiple bet from front-end
+        - lacks defence against refresh
+
+Task
+
+    - get my bets

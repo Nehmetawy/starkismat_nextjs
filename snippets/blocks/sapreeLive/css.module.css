@@ -1,0 +1,54 @@
+.itemBox {
+  box-shadow: var(--neuomorphShadowA);
+  border-radius: 5px;
+  margin: 15px 4px;
+}
+
+.itemCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 14px;
+  flex-wrap: nowrap;
+}
+.itemCont > div {
+  width: 100%;
+  text-align: center;
+}
+.betid {
+  min-width: 180px;
+}
+.iconButton {
+  padding: 5px 0;
+}
+/* -------------------- */
+/* button showcase */
+.simpleButton {
+  display: inline-block;
+  padding: 6px 15px;
+  max-width: 70px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+  border-radius: 3px;
+  box-shadow: var(--neuomorphShadowA);
+}
+
+.simpleButton.t1 {
+  background: linear-gradient(-45deg, var(--green) 50%, var(--purple) 50%);
+}
+
+.simpleButton.t2 {
+  background: linear-gradient(-45deg, var(--red) 50%, var(--purple) 50%);
+}
+.simpleButton.r {
+  background-color: var(--red);
+}
+.simpleButton.v {
+  background-color: var(--purple);
+}
+.simpleButton.g {
+  background-color: var(--green);
+}

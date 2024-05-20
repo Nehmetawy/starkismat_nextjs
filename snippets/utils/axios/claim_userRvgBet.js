@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const POST_GAME_RVG = (url, data, firebaseToken, handler) => {
+export const CLAIM_USER_RVG = (url, data, firebaseToken, handler) => {
   const header = { Authorization: `Bearer ${firebaseToken}` };
 
   axios

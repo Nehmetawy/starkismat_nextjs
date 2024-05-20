@@ -11,3 +11,21 @@ export default function Get_UserrvgGames_fetcher([
     return res.data;
   });
 }
+
+export function Get_UserrvgGames_fetch(url, firebaseToken, payload, handler) {
+  const header = { Authorization: `Bearer ${firebaseToken}` };
+  axios
+    .get(url, { headers: header, params: payload })
+    .then((res) => {
+      const data = res.data;
+
+      handler(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      handler({
+        error: true,
+        log: "error fetching data, code:1021",
+      });
+    });
+}

@@ -1,5 +1,6 @@
 import css from "./css.module.css";
 import { Lottie } from "@/snippets/components";
+
 const style = {
   width: 200,
   height: 200,

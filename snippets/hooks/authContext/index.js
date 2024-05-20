@@ -19,7 +19,7 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     setInterval(() => {
       GetUserToken(setToken);
-    }, 120000);
+    }, 90000);
 
     const authSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {

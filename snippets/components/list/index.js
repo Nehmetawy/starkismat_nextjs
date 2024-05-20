@@ -3,6 +3,8 @@ import Title from "./listTitle";
 import Nav from "./ListNav";
 import Cont from "./listCont";
 import RenderItems from "./itemRendered";
+import Refresh from "./refreshButton";
+
 // -------------------------------------
 // -------------------------------------
 import SapreeItem from "./itemSapreeGame";
@@ -17,6 +19,7 @@ const List = {
   Nav: Nav,
   Cont: Cont,
   RenderItems: RenderItems,
+  Refresh: Refresh,
   // ----------------------
   SapreeItem: SapreeItem,
   UserSapreeItem: UserSapreeItem,

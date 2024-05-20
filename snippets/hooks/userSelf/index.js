@@ -1,58 +1,57 @@
-import useSWRImmutable from "swr/immutable";
+import { useState, useEffect } from "react";
 import useAppstate from "@/snippets/hooks/golbalApp";
-import { Get_UserrvgGames_fetch } from "@/snippets/utils/axios/get_rvgUserGame";
 import { getUrl } from "@/snippets/utils/axios/_config";
-import { useEffect, useState } from "react";
-
-const url = getUrl("getUserSapreeGames");
+import Get_userSelf_fetcher from "@/snippets/utils/axios/get_userSelf";
+const url = getUrl("getUserSelf");
 
 function selection(state) {
   return {
     token: state.firebaseToken,
-    ping: state.appSapreeUserGames,
-    lastFetch: state.userSapreeLastFetch,
+    ping: state.appUserHook,
+    lastFetch: state.userLastFetch,
   };
 }
 
-export default function App_UsersapreeGameHook({ claimed = false }) {
-  const { ping, token, lastFetch } = useAppstate(selection);
+export default function UserSelf_HOOK() {
+  const { token, ping, lastFetch } = useAppstate(selection);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [time, setTime] = useState(new Date().getTime());
 
-  const payload = {
-    claimed: claimed,
-  };
-
   useEffect(() => {
-    getData();
+    getData(false);
   }, [token]);
 
-  // I want to fetch the data at the right time as well
   function getData(bool) {
     if (!token) return;
     const timeNew = new Date().getTime();
     if (Math.abs(timeNew - lastFetch) > 60000 || bool) {
       setTime(timeNew);
       setLoading(true);
-      Get_UserrvgGames_fetch(url, token, payload, handler);
+      Get_userSelf_fetcher(url, token, handler);
+    } else {
+      return;
     }
   }
 
-  function handler({ error, success, log, data }) {
+  function handler({ error, success, log, user, tokenRefresh }) {
     setLoading(false);
+
     if (error) {
       setError(log);
+      if (tokenRefresh) {
+        //
+      }
     }
     if (success) {
-      ping(data, claimed, time);
+      ping(user, time);
     }
   }
   return {
+    get: getData,
     props: {
       loading,
       error,
     },
-    get: getData,
   };
 }

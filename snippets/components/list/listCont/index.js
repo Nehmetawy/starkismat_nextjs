@@ -11,7 +11,11 @@ export default function ListCont({ show = true, isLoading = false, children }) {
     <div className={pannelClass}>
       <div>
         <div className={css.listBox}>
-          {isLoading && <Lottie />}
+          {isLoading && (
+            <div className={css.lottieCont}>
+              <Lottie />
+            </div>
+          )}
           {children}
         </div>
       </div>

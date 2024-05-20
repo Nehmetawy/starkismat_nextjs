@@ -1,6 +1,7 @@
 .itemBox {
   border-bottom: 1px solid var(--borderPrimary);
 }
+
 .itemCont {
   display: flex;
   flex-direction: row;
@@ -73,4 +74,21 @@
 }
 .pair > div {
   width: 100%;
+}
+
+.loading {
+  display: inline-block;
+  animation-name: rotate;
+  animation-duration: 2s;
+  transform-origin: center;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

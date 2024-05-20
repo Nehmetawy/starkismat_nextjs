@@ -1,4 +1,9 @@
-import { BottomNavigation, DropDown, Gap } from "@/snippets/components";
+import {
+  BottomNavigation,
+  DropDown,
+  Gap,
+  ProfileCard,
+} from "@/snippets/components";
 import { ListBlock } from "@/snippets/blocks";
 import { useAppUIState } from "@/snippets/hooks/globalUi";
 export default function Profile() {
@@ -6,6 +11,8 @@ export default function Profile() {
 
   return (
     <div>
+      <ProfileCard />
+      <Gap h={20} />
       <DropDown />
       <Gap h={20} />
       <ListBlock selectedListId={selectedListId} />
