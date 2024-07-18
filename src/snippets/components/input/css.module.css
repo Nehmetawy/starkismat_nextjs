@@ -1,0 +1,13 @@
+.input {
+  box-shadow: var(--neuomorphInShadowB);
+  color: var(--textSecondary);
+  font-size: var(--font_16);
+
+  padding: 10px 15px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  width: 100%;
+}

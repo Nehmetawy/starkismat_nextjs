@@ -1,0 +1,20 @@
+.button {
+  box-shadow: var(--neuomorphShadowA);
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 40px;
+  border: 2px solid var(--borderPrimary);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}

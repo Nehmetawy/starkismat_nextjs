@@ -1,0 +1,40 @@
+.container {
+  position: fixed;
+  z-index: 1000;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  min-height: 20px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  box-shadow: var(--neuomorphShadowA);
+  background-color: var(--backgroundPrimary);
+}
+
+.navBox {
+  padding: 8px 0;
+}
+
+.nav {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.nav.active {
+  box-shadow: var(--neuomorphInShadowB);
+}
