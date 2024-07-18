@@ -10,6 +10,7 @@ function page() {
       <SapreeGame />
       <Gap h={10} />
       <FormPostSapreeBet />
+      <Gap h={100} />
       <BottomNav />
     </div>
   );
